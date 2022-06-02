@@ -1,1 +1,13 @@
 
+name: Ionic Serve
+
+on: {push}
+jobs:
+  Print-Hello-World:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ionic serve
+      - name: Check o repositorio
+        uses: actions/checkout@v3
+      - run: ionic --version
+ 
